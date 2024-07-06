@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="flex flex-col w-11/12 justify-center  mt-10">
+      <section class="NavBar  fixed">
+        <nav class="container mx-auto grid grid-cols-5 justify-evenly w-full text-center relative">
+          <!-- Logo -->
+          <div class="logo col-span-1 ms-10">
+            <img src="/assets/images/logo.svg" alt="LOGO" style="width: 80px" />
+          </div>
+          
+          <!-- Dropdown icon for small screens -->
+          <div class="dropdown lg:hidden md:hidden ms-10 absolute right-0">
+            <img src="/assets/images/dropdown.jfif" alt="Dropdown Icon" class="w-9 h-9 cursor-pointer" onclick="toggleDropdown()" />
+            
+            <!-- Dropdown menu -->
+            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10">
+              <ul class="py-1">
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Our Services</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">About</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Blog & News</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Account</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Navigation items hidden on medium screens and below -->
+          <div class="col-span-4 hidden md:grid">
+            <div class="navItems mt-5">
+              <ul class="grid grid-cols-9 justify-evenly">
+                <li class="col-span-2 flex justify-start font-bold hover:border-b-2 hover:border-red-500 w-1/2">
+                  <a href="#">Our Services</a>
+                </li>
+                <li class="col-span-1 font-bold hover:border-b-2 hover:border-red-500 mx-2">
+                  <a href="#">About</a>
+                </li>
+                <li class="col-span-1 font-bold hover:border-b-2 hover:border-red-500 mx-2">
+                  <a href="#">Blog&News</a>
+                </li>
+                <li class="col-span-1 font-bold hover:border-b-2 hover:border-red-500 mx-2 ms-10">
+                  <a href="#">Contact</a>
+                </li>
+                <li class="col-span-2 font-bold hover:border-b-2 hover:border-red-500 w-2/6 ms-16">
+                  <a href="#">Account</a>
+                </li>
+                <li class="mx-3 col-span-2">
+                  <a href="#" class="font-bold relative">
+                    <img src="/assets/images/phone.svg" alt="phone icon" class="w-4 h-4 absolute" />
+                    +961 81978954
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- End of Navbar -->
+
+      <section class="hero mt-16 ms-10">
+        <div class="container w-full flex flex-wrap">
+          <!-- Left Side -->
+          <div class="left w-full lg:w-1/2">
+            <span class="">
+              <ul class="flex flex-wrap w-full lg:w-2/5 border-b border-gray-400 lg:ms-16 justify-center lg:justify-start">
+                <li class="text-gray-500 mx-2 border-b hover:text-red-600 hover:border-red-600 hover:font-bold hover:border-b-2">
+                  <a href="#">Hosting</a>
+                </li>
+                <li class="text-gray-500 mx-2 border-b hover:text-red-600 hover:border-red-600 hover:font-bold hover:border-b-2">
+                  <a href="#">Domain</a>
+                </li>
+                <li class="text-gray-500 mx-2 border-b hover:text-red-600 hover:border-red-600 hover:font-bold hover:border-b-2">
+                  <a href="#">SEO</a>
+                </li>
+                <li class="text-gray-500 mx-2 border-b hover:text-red-600 hover:border-red-600 hover:font-bold hover:border-b-2">
+                  <a href="#">Email</a>
+                </li>
+              </ul>
+            </span>
+      
+            <h1 class="text-3xl lg:text-7xl font-bold px-4 lg:px-14 mt-5 text-gray-800 text-center lg:text-left">
+              Premium Web Hosting for Your Website
+            </h1>
+      
+            <p class="text-gray-500 text-lg lg:text-2xl px-4 lg:px-16 text-center lg:text-left">
+              Blazing fast web hosting for individuals and businesses of all sizes backed by 24x7x365 Support.
+            </p>
+      
+            <div class="buttons flex flex-col lg:flex-row items-center lg:items-start mx-4 lg:mx-10 mt-8 lg:mt-16">
+              <a href="#" style="background-color: #b00000" class="btn1 border text-white p-3 rounded-lg mx-5 mb-4 lg:mb-0">
+                Create an Account
+              </a>
+              <a href="#" class="border border-black p-3 rounded-lg mx-5">
+                Choose your plan
+              </a>
+            </div>
+          </div>
+      
+          <!-- Right Side -->
+          <div class="right w-full flex justify-center  lg:w-1/2 relative mt-5 ">
+            <img src="/assets/images/rightTop.svg" alt="icon" class="hidden lg:block absolute right-0 top-16" />
+            <img src="/assets/images/rightBottom.svg" alt="icon" class="hidden lg:block absolute right-0 bottom-10" />
+            <img src="/assets/images/leftMiddle.svg" alt="icon" class="hidden lg:block absolute left-36 bottom-40" />
+            <div class="ms-0 lg:ms-44 flex justify-center lg:justify-start">
+              <img src="/assets/images/heroPic.svg" alt="picture of a woman using the laptop" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- End of hero  -->
+
+      <section class="mt-20 ms-1">
+        <div class="up ms-4 lg:ms-14 flex flex-wrap">
+          <!-- Left -->
+          <div class="left w-full lg:w-1/2 text-center lg:text-left">
+            <h1 class="text-3xl lg:text-5xl text-gray-800 font-bold">
+              True Cloud Web Hosting
+            </h1>
+            <p class="mt-8 text-base lg:text-lg pe-4 lg:pe-12">
+              True Cloud Web Hosting All of the hosting packages we offer are deployed instantly on our SSD powered cloud. We don't use dedicated servers that operate on single pieces of hardware. Our entire infrastructure is built to be reliable, secure, and scalable.
+            </p>
+          </div>
+          <!-- Right -->
+          <div class="right w-full lg:w-1/2 mt-8 lg:mt-0">
+            <div class="images w-full ms-0 lg:ms-20">
+              <div class="upper flex flex-wrap justify-center lg:justify-start lg:ms-16">
+                <img class="w-1/4 mx-2 lg:mx-4 lg:me-5" src="/assets/images/cPanel.svg" alt="hosting images" />
+                <img class="w-1/4 mx-2 lg:mx-8" src="/assets/images/imunify.svg" alt="hosting images" />
+                <img class="w-1/4 mx-2 lg:mx-4 lg:ms-5" src="/assets/images/litespeed.svg" alt="hosting images" />
+              </div>
+              <div class="lower flex flex-wrap justify-center lg:justify-start lg:ms-8 mt-8 lg:mt-12">
+                <img class="w-1/4 mx-2 lg:mx-4 lg:me-8" src="/assets/images/Softaculas.svg" alt="hosting images" />
+                <img class="w-1/4 mx-2 lg:mx-6" src="/assets/images/wordpress.svg" alt="hosting images" />
+                <img class="w-1/4 mx-2 lg:mx-4 lg:ms-8" src="/assets/images/CloudFare.svg" alt="hosting images" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Down -->
+        <div class="down w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 lg:mt-24 justify-items-center ms-0 lg:ms-16 p-5">
+          <div class="uptime flex flex-col items-center text-center lg:text-left"data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+            <img src="/assets/images/icn11.svg" alt="uptime image" />
+            <h1 class="font-bold text-xl lg:text-2xl mt-3">99.9% Uptime</h1>
+            <p class="text-sm justify-normal p-3">
+              We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.
+            </p>
+          </div>
+          <div class="blazing flex flex-col items-center text-center lg:text-left" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+            <img src="/assets/images/BlazingIcon.svg" alt="blazing image" />
+            <h1 class="font-bold text-xl lg:text-2xl mt-3">Blazing Fast Web Hosting</h1>
+            <p class="text-sm justify-normal p-3">
+              We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.
+            </p>
+          </div>
+          <div class="certificate flex flex-col items-center text-center lg:text-left" data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+            <img src="/assets/images/icn41.svg" alt=" Free SSL certificate image" />
+            <h1 class="font-bold text-xl lg:text-2xl mt-3">Free SSL Certificates</h1>
+            <p class="text-sm justify-normal p-3">
+              We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.
+            </p>
+          </div>
+          <div class="24/7 flex flex-col items-center text-center lg:text-left" data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+            <img src="/assets/images/icn24.svg" alt="Support 24/7 image" />
+            <h1 class="font-bold text-xl lg:text-2xl mt-3">24x7 Friendly Support</h1>
+            <p class="text-sm justify-normal p-3">
+              We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- end of why us section -->
+
+      <section class="mt-24 w-full sm:ms-4   ">
+        <div class="priceHeader flex flex-col justify-center items-center text-center">
+          <h1 class="font-bold text-3xl lg:text-5xl">Ready to get started with</h1>
+          <h1 class="font-bold text-3xl lg:text-5xl">Lemon Wares?</h1>
+          <h2 class="mt-6 lg:mt-10 text-xl lg:text-3xl">Choose the package that suits you</h2>
+        </div>
+      
+        <div class="flex justify-center items-center mt-8 lg:mt-10 relative">
+          <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
+            <label for="toggle-button" class="font-semibold text-xl lg:text-3xl">Monthly</label>
+            <input type="checkbox" id="toggle-button" class="toggle-button hidden" />
+            <div class="relative inline-block w-16 lg:w-24 h-8 lg:h-12">
+              <div class="absolute inset-0 bg-gray-300 rounded-full transition duration-300"></div>
+              <div class="absolute inset-0 bg-red-600 rounded-full transition duration-300"></div>
+              <span class="absolute top-1 lg:top-2 left-1 lg:left-2 bg-white w-6 lg:w-8 h-6 lg:h-8 rounded-full shadow-md transition-transform duration-300 transform"></span>
+            </div>
+            <p class="absolute top-24 lg:top-7 text-xs rounded-md p-1 bg-yellow-200 transform -translate-x-1/2 -translate-y-1/2" style="left: 65%">
+              20% discount
+            </p>
+            <label for="toggle-button" class="font-semibold text-xl lg:text-3xl">Yearly</label>
+          </div>
+        </div>
+      
+        <div class="flex justify-center items-center mt-8 lg:mt-10 space-x-0 lg:space-x-8 flex-wrap">
+          <div class="text-center  me-4 lg:mb-0" id="basic-tab">
+            <h3 class="text-lg lg:text-2xl font-bold cursor-pointer  ">Basic</h3>
+            <div id="basic-line" class="h-1 w-16 lg:w-24 mt-1" style="background-color: #b00000"></div>
+          </div>
+          <div class="text-center" id="premium-tab">
+            <h3 class="text-lg lg:text-2xl font-bold cursor-pointer">Premium</h3>
+            <div id="premium-line" class="h-1 w-16 lg:w-24 mt-1" style="background-color: gray"></div>
+          </div>
+        </div>
+      
+        <!-- Pricing Cards Section -->
+        <div class="pricing-cards grid grid-cols-1 lg:grid-cols-3 mt-16 justify-around  gap-10 lg:gap-36 mx-20 ">
+          <!-- Card 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-400" data-aos="fade-right" >
+            <h3 class="text-2xl font-bold mb-4">Starter</h3>
+            <p class="text-black">
+              with all your customers via all conversation channels in one central dashboard.
+            </p>
+            <p class="text-5xl mt-5 font-semibold price">$2.80</p>
+            <button class="mt-4 w-full border-2 border-black py-2 rounded-lg font-semibold">Choose Plan</button>
+            <ul class="list-none">
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />2GB SSD</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />10GB Bandwidth</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />15 Email Accounts</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Unlimited Database</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />4 Subdomains</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />1 Parked Domain</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />2 Websites</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Free SSL</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Softaculous</li>
+            </ul>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-400">
+            <h3 class="text-2xl font-bold mb-4">Standard</h3>
+            <p class="text-gray-600">
+              with all your customers via all conversation channels in one central dashboard.
+            </p>
+            <p class="text-5xl mt-5 font-semibold price">$4.20</p>
+            <button class="mt-4 w-full border-2 border-black py-2 rounded-lg font-semibold">Choose Plan</button>
+            <ul class="list-none">
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />4GB SSD</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />20GB Bandwidth</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />30 Email Accounts</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Unlimited Database</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />8 Subdomains</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />4 Parked Domain</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />10 Websites</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Free SSL</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Softaculous</li>
+            </ul>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-400" data-aos="fade-left">
+            <h3 class="text-2xl font-bold mb-4">Suprem</h3>
+            <p class="text-gray-600">
+              with all your customers via all conversation channels in one central dashboard.
+            </p>
+            <p class="text-5xl mt-5 font-semibold price">$7.00</p>
+            <button class="mt-4 w-full border-2 border-black py-2 rounded-lg font-semibold">Choose Plan</button>
+            <ul class="list-none">
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />8GB SSD</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />40GB Bandwidth</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />100 Email Accounts</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Unlimited Database</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />20 Subdomains</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />8 Parked Domain</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Unlimited Websites</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Free SSL</li>
+              <li class="flex my-3"><img src="/assets/images/checkmark.png" alt="check mark icon" />Softaculous</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- End of Pricing  -->
+      <section class="bg-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <!-- left -->
+          <div class="left w-full lg:w-3/5 col-span-3 relative">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl lg:text-5xl font-extrabold text-gray-900">
+                Real Stories From Real Customers
+              </h2>
+              <p class="mt-4 text-lg text-gray-600">
+                Get inspired by these stories
+              </p>
+            </div>
+            <div class="">
+              <div class="bg-gray-50 p-6 rounded-lg shadow-md w-full lg:w-2/3 absolute lg:left-80" id="left-testimonial">
+                <div class="flex items-center mb-4">
+                  <img id="left-testimonial-img" class="h-12 w-12 rounded-full" src="/assets/images/Crypto.svg" alt="User 1" />
+                </div>
+                <p class="text-black">
+                  <span id="left-testimonial-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur condimentum, nisi nunc aliquet arcu, vitae feugiat risus ipsum eu lacus.
+                  </span>
+                </p>
+                <div class="mt-8">
+                  <h3 id="left-testimonial-name" class="text-lg font-bold text-gray-900">Floyd Miles</h3>
+                  <p id="left-testimonial-title" class="text-gray-500 font-semibold">Vice President, CLI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="right col-span-2 space-y-5">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-5 lg:mb-0" id="right-testimonial-1">
+              <div class="flex items-center mb-4">
+                <img id="right-testimonial-1-img" class="h-12 w-12 rounded-full" src="/assets/images/Jerry.svg" alt="User 2" />
+              </div>
+              <p class="text-black" id="right-testimonial-1-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione provident asperiores doloribus non repudiandae dolores unde, ipsa assumenda nam atque in minima doloremque accusamus obcaecati dolore repellat?
+              </p>
+              <div class="mt-8">
+                <h3 id="right-testimonial-1-name" class="text-lg font-bold text-gray-900">Jane Cooper</h3>
+                <p id="right-testimonial-1-title" class="text-gray-500 font-semibold">CEO, JPNL</p>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hidden lg:block" id="right-testimonial-2">
+              <div class="flex items-center mb-4">
+                <img id="right-testimonial-2-img" class="h-12 w-12 rounded-full" src="/assets/images/LeeveOn.svg" alt="User 3" />
+              </div>
+              <p class="text-black" id="right-testimonial-2-text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
+              <div class="mt-8">
+                <h3 id="right-testimonial-2-name" class="text-lg font-bold text-gray-900">Kristin Watson</h3>
+                <p id="right-testimonial-2-title" class="text-gray-500 font-semibold">Co-Founder, LeeveOn Branding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="lower mt-24 flex flex-col lg:flex-row">
+          <div class="left lg:ms-24 w-full lg:w-1/2 text-center lg:text-left">
+            <h1 class="text-3xl lg:text-6xl font-bold">We serve over 100</h1>
+            <h1 class="text-3xl lg:text-6xl font-bold">Nigerian Websites</h1>
+            <p class="mt-4 text-lg lg:text-xl">
+              Connect LemonWares with your favorite tools that <br />you use daily and keep things on track.
+            </p>
+          </div>
+          <div class="right flex flex-col w-full lg:w-1/2 items-center lg:items-end mt-8 lg:mt-0">
+            <div class="upper flex flex-wrap justify-center lg:justify-end">
+              <img src="/assets/images/Jerry.svg" alt="companies" class="mx-4 my-2 lg:mx-10 lg:my-0" />
+              <img src="/assets/images/Korane.svg" alt="companies" class="mx-4 my-2 lg:mx-10 lg:my-0" />
+              <img src="/assets/images/Nadine.svg" alt="companies" class="mx-4 my-2 lg:mx-10 lg:my-0" />
+            </div>
+            <div class="lower flex flex-wrap justify-center lg:justify-end mt-4 lg:mt-6">
+              <img src="/assets/images/LeeveOn.svg" alt="companies" class="mx-4 my-2 lg:mx-10 lg:my-0" />
+              <img src="/assets/images/Jrango.svg" alt="companies" class="mx-4 my-2 lg:mx-10 lg:my-0" />
+              <img src="/assets/images/Crypto.svg" alt="companies" class="mx-4 my-2 lg:mx-10 lg:my-0" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- End of testimonial section  -->
+
+      <section class="bg-white">
+        <div class="relative w-11/12 flex flex-col justify-around items-center mx-auto p-20 md:ms-20">
+          <!-- Adjusted margin for medium screens and above -->
+          <img src="/assets/images/leftMiddle.svg" alt="icon" class="absolute left-0 bottom-10" />
+          <img src="/assets/images/rightBottom.svg" alt="icon" class="absolute right-0 bottom-10" />
+          <img src="/assets/images/rightTop.svg" alt="icon" class="absolute top-0 left-96 hidden md:block" />
+          <!-- Hidden on small screens, visible on medium screens and above -->
+      
+          <h1 class="text-4xl md:text-6xl text-gray-800 font-bold text-center mb-4">
+            We're here to make your website awesome.
+          </h1>
+          <!-- Adjusted font size for responsiveness -->
+      
+          <a href="#" class="text-white mt-8 p-4 rounded-lg flex items-center justify-center text-sm md:text-base"
+            style="background-color: #b00000;">
+            <img src="/assets/images/whatsapp.svg" alt="whatsapp icon" class="mr-2" />
+            Get in touch with us
+          </a>
+          <!-- Adjusted button styling and alignment -->
+      
+        </div>
+      </section>
+      
+      <!-- End of contact section -->
+
+      <section class="w-screen">
+        <footer class="w-full " style="background-color: #b00000;">
+          <div class="foot grid grid-cols-1 md:grid-cols-5 gap-6 px-4 md:px-20 py-5"> <!-- Using responsive grid layout -->
+      
+            <!-- Left Section -->
+            <div class="left">
+              <img src="/assets/images/whiteLogo.svg" alt="logo" class="mt-10 w-36 md:w-auto mx-auto">
+              <p class="text-white text-center mt-6 md:text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elem
+              </p>
+            </div>
+      
+            <!-- Service Section -->
+            <div class="mid">
+              <h1 class="text-white py-3 text-center md:text-left">Services</h1>
+              <p class="text-white py-3 text-center md:text-left">Domain</p>
+              <p class="text-white py-3 text-center md:text-left">Shared Hosting</p>
+              <p class="text-white py-3 text-center md:text-left">Cloud Hosting</p>
+              <p class="text-white py-3 text-center md:text-left">Private Hosting</p>
+            </div>
+      
+            <!-- Hosting Section -->
+            <div class="mid">
+              <h1 class="text-white py-3 text-center md:text-left">Hosting</h1>
+              <p class="text-white py-3 text-center md:text-left">Cheap Hosting</p>
+              <p class="text-white py-3 text-center md:text-left">Hosting Wordpress</p>
+              <p class="text-white py-3 text-center md:text-left">Email Hosting</p>
+              <p class="text-white py-3 text-center md:text-left">Hosting Unlimited</p>
+            </div>
+      
+            <!-- Company Section -->
+            <div class="mid">
+              <h1 class="text-white py-3 text-center md:text-left">Company</h1>
+              <p class="text-white py-3 text-center md:text-left">About</p>
+              <p class="text-white py-3 text-center md:text-left">Career</p>
+              <p class="text-white py-3 text-center md:text-left">Contact Us</p>
+            </div>
+      
+            <!-- Help Section -->
+            <div class="mid">
+              <h1 class="text-white py-3 text-center md:text-left">Help</h1>
+              <p class="text-white py-3 text-center md:text-left">FAQ</p>
+              <p class="text-white py-3 text-center md:text-left">Help support</p>
+            </div>
+      
+          </div>
+          <p class="text-white flex px-4 md:px-20 mt-4 md:mt-0">
+            Built by Jeremiah with
+            <img src="/assets/images/heart.svg" alt="heart icon" class="ml-1">
+            love in Lagos.&copy; Copyright 2021
+          </p>
+        </footer>
+      </section>
+      
+      
+      <!-- End of footer -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+
+  AOS.init();
+
+function toggleDropdown() {
+    var dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.classList.toggle('hidden');
+  }
+
+  
+        document
+          .getElementById("toggle-button")
+          .addEventListener("change", function () {
+            const toggleSlider = this.nextElementSibling.querySelector("span");
+            if (this.checked) {
+              toggleSlider.style.transform = "translateX(150%)";
+            } else {
+              toggleSlider.style.transform = "translateX(0%)";
+            }
+          });
+
+        const basicTab = document.getElementById("basic-tab");
+        const premiumTab = document.getElementById("premium-tab");
+        const basicLine = document.getElementById("basic-line");
+        const premiumLine = document.getElementById("premium-line");
+        const prices = document.querySelectorAll(".price");
+
+        basicTab.addEventListener("click", () => {
+          basicLine.style.backgroundColor = "#B00000";
+          premiumLine.style.backgroundColor = "gray";
+          prices.forEach((price) => {
+            const originalPrice = parseFloat(
+              price.textContent.replace("$", "")
+            );
+            price.textContent = `$${(originalPrice / 3).toFixed(2)}`;
+          });
+        });
+
+        premiumTab.addEventListener("click", () => {
+          basicLine.style.backgroundColor = "gray";
+          premiumLine.style.backgroundColor = "#B00000";
+          prices.forEach((price) => {
+            const originalPrice = parseFloat(
+              price.textContent.replace("$", "")
+            );
+            price.textContent = `$${(originalPrice * 3).toFixed(2)}`;
+          });
+        });
+
+        const testimonials = [
+          {
+            img: "/assets/images/Crypto.svg",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur condimentum, nisi nunc aliquet arcu, vitae feugiat risus ipsum eu lacus.",
+            name: "Floyd Miles",
+            title: "Vice President, CLI",
+          },
+          {
+            img: "/assets/images/Jerry.svg",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione provident asperiores doloribus non repudiandae dolores unde, ipsa assumenda nam atque in minima doloremque accusamus obcaecati dolore repellat?",
+            name: "Jane Cooper",
+            title: "CEO, JPNL",
+          },
+          {
+            img: "/assets/images/LeeveOn.svg",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            name: "Kristin Watson",
+            title: "Co-Founder, LeeveOn Branding",
+          },
+          {
+            img: "/assets/images/Nadine.svg",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            name: "Floyd Miles",
+            title: "Vice President, CLI",
+          },
+          {
+            img: "/assets/images/Jrango.svg",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            name: "Jane Cooper",
+            title: "CEO, JPNL",
+          },
+          {
+            img: "/assets/images/Korane.svg",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            name: "Kristin Watson",
+            title: "Co-Founder, LeeveOn Branding",
+          },
+          // Add more testimonials as needed
+        ];
+
+        let currentIndex = 0;
+
+        function updateTestimonials() {
+          const leftTestimonial = testimonials[currentIndex];
+          const rightTestimonial1 =
+            testimonials[(currentIndex + 1) % testimonials.length];
+          const rightTestimonial2 =
+            testimonials[(currentIndex + 2) % testimonials.length];
+
+          document.getElementById("left-testimonial-img").src =
+            leftTestimonial.img;
+          document.getElementById("left-testimonial-text").textContent =
+            leftTestimonial.text;
+          document.getElementById("left-testimonial-name").textContent =
+            leftTestimonial.name;
+          document.getElementById("left-testimonial-title").textContent =
+            leftTestimonial.title;
+
+          document.getElementById("right-testimonial-1-img").src =
+            rightTestimonial1.img;
+          document.getElementById("right-testimonial-1-text").textContent =
+            rightTestimonial1.text;
+          document.getElementById("right-testimonial-1-name").textContent =
+            rightTestimonial1.name;
+          document.getElementById("right-testimonial-1-title").textContent =
+            rightTestimonial1.title;
+
+          document.getElementById("right-testimonial-2-img").src =
+            rightTestimonial2.img;
+          document.getElementById("right-testimonial-2-text").textContent =
+            rightTestimonial2.text;
+          document.getElementById("right-testimonial-2-name").textContent =
+            rightTestimonial2.name;
+          document.getElementById("right-testimonial-2-title").textContent =
+            rightTestimonial2.title;
+
+          currentIndex = (currentIndex + 1) % testimonials.length;
+        }
+
+        setInterval(updateTestimonials, 5000); // Change testimonials every 5 seconds
+        updateTestimonials(); // Initial update
+      </script>
+    </div>
+  </body>
+</html>
